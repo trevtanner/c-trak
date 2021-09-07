@@ -1,0 +1,3 @@
+Add fuctions / components to update totals and total spent
+Add login feature along with storage for logged in users
+Add filter feature by coin
