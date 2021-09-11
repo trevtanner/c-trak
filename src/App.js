@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Fragment, useState } from 'react';
 
 import AddUser from './components/Users/AddUser';
 import UsersList from './components/Users/UsersList';
@@ -8,26 +6,27 @@ import Heading from './components/UI/Heading'
 import Footer from './components/UI/Layout/Footer';
 import Totals from './components/Totals/Totals';
 
-function App() {
-  const [usersList, setUsersList] = useState([]);
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-  const addUserHandler = (uCoin, uAmount, uValue, uDate) => {
-    setUsersList((prevUsersList) => {
+const App = () => {
+  const [transactionsList, setTransactionsList] = useState([]);
+
+  const addUserHandler = (transaction) => {
+    setTransactionsList((prevTransactionsList) => {
       return [
-        ...prevUsersList,
-        { coin: uCoin, amount: uAmount, value: uValue, date: uDate.toString(), id: Math.random().toString() },
+       ...prevTransactionsList, transaction
       ];
     });
   };
 
   return (
-    <div>
+    <Fragment>
     <Heading />
-      <AddUser onAddUser={addUserHandler} />
-      <Totals />
-      <UsersList users={usersList} />
+      <AddUser onSaveTransactionData={addUserHandler} />
+      <Totals transactions={transactionsList} />
+      <UsersList transactions={transactionsList} />
     <Footer />
-    </div>
+    </Fragment>
   );
 }
 

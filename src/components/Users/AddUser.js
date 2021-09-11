@@ -22,11 +22,20 @@ const AddUser = (props) => {
       });
       return;
     }
-    props.onAddUser(enteredCoin, enteredAmount, enteredValue, new Date(enteredDate));
+   const transaction = {
+     id: Math.random().toString(),
+     coin: enteredCoin,
+     amount: enteredAmount,
+     value: enteredValue,
+     date: new Date(enteredDate)
+   }
+
+    props.onSaveTransactionData(transaction);
     setEnteredCoin("BTC");
     setEnteredAmount("");
     setEnteredValue("");
     setEnteredDate("");
+    console.log(transaction);
   };
 
   const coinChangeHandler = (event) => {
