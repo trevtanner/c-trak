@@ -77,3 +77,7 @@ const App = () => {
 };
 
 export default App;
+
+//find way to move some logic out of App component
+//hide totals and transactions until 1 has been entered
+//add loading / fade in and out to components
