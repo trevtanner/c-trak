@@ -80,14 +80,10 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`trevtanner`, `c-trak`, `@trevtanner`, `trevor.tanner.developer@gmail.com`, `c-Trak`, `project_description`
-
 
 ### Built With
 
-* [ReactJS](https://reactjs.org/)
+* [React.js](https://reactjs.org/)
 
 
 
@@ -96,12 +92,11 @@ Here's a blank template to get started:
 
 To get a local copy up and running follow these simple steps.
 
-<!-- ### Prerequisites
+### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
-  npm install npm@latest -g -->
+  npm install npm@latest -g
   ```
 
 ### Installation
