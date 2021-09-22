@@ -1,6 +1,4 @@
- 
- 
- const Transaction = (props) => {
+const Transaction = (props) => {
     let date = props.date
     let options = { timeZone: 'UTC', timeZoneName: 'short'};
     
@@ -11,7 +9,7 @@
             <li key={props.id}>
               <b>Amount:</b> {props.amount} {props.coin} 
               <br />
-              <b>Value:</b> ${props.value}
+              <b>Cost in dollar at time of purchase:</b> ${props.value}
               <br />
               <b>Purchase Date:</b> {time}
             </li>

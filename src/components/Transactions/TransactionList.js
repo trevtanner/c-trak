@@ -2,9 +2,9 @@ import React from 'react'
 
 import Card from '../UI/Card'
 import Transaction from './Transaction'
-import classes from './UsersList.module.css'
+import classes from './TransactionList.module.css'
 
-const UsersList = (props) => {
+const TransactionList = (props) => {
   return (
     <Card className={classes.users}>
       <ul>
@@ -22,4 +22,6 @@ const UsersList = (props) => {
   )
 }
 
-export default UsersList
+export default TransactionList
+
+//add tabs to filter betweeen transactions, All, BTC, ETH, etc...

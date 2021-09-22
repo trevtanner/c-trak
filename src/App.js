@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 
-import AddUser from "./components/Users/AddUser";
-import UsersList from "./components/Users/UsersList";
+import AddTransaction from "./components/Transactions/AddTransaction";
+import TransactionList from "./components/Transactions/TransactionList";
 import Heading from "./components/UI/Heading";
 import Footer from "./components/UI/Layout/Footer";
 import Totals from "./components/Totals/Totals";
@@ -27,13 +27,13 @@ const App = () => {
         setBtcTotal(prevState => parseFloat(prevState) + parseFloat(transaction.amount));
       }
       if (transaction.coin === "ETH") {
-        setEthTotal(ethTotal + transaction.amount);
+        setEthTotal(prevState => parseFloat(prevState) + parseFloat(transaction.amount));
       }
       if (transaction.coin === "ADA") {
-        setAdaTotal(adaTotal + transaction.amount);
+        setAdaTotal(prevState => parseFloat(prevState) + parseFloat(transaction.amount));
       }
       if (transaction.coin === "BSC") {
-        setBscTotal(bscTotal + transaction.amount);
+        setBscTotal(prevState => parseFloat(prevState) + parseFloat(transaction.amount));
       }
     };
     addToTotal(parseInt(transaction));
@@ -42,7 +42,7 @@ const App = () => {
   return (
     <Fragment>
       <Heading />
-      <AddUser onSaveTransactionData={addUserHandler} />
+      <AddTransaction onSaveTransactionData={addUserHandler} />
       <Totals
         transactions={transactionsList}
         btcTotal={btcTotal}
@@ -50,7 +50,7 @@ const App = () => {
         adaTotal={adaTotal}
         bscTotal={bscTotal}
       />
-      <UsersList transactions={transactionsList} />
+      <TransactionList transactions={transactionsList} />
       <Footer />
     </Fragment>
   );
