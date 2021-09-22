@@ -1,4 +1,3 @@
-import Card from "../UI/Card"
 import classes from "../Transactions/TransactionList.module.css";
 
 
@@ -6,16 +5,14 @@ import classes from "../Transactions/TransactionList.module.css";
 const DollarTotals = (props) => {
 
     return (
-            <Card className={classes.users}>
-            <ul>
-                <li>Total Dollar Amount: </li>
-                <li>Total dollars spent on BTC:</li>
-                <li>Total dollars spent on ETH: {props.ethTotal}</li>
-                <li>Total dollars spent on ADA: {props.adaTotal}</li>
-                <li>Total dollars spent on BSC: {props.bscTotal}</li>
+            <ul className={classes.users}>
+                <li>Total amount: $ {props.dollarTotal}</li>
+                <li>Total spent on BTC: $ {props.btcDollarTotal}</li>
+                <li>Total spent on ETH: $ {props.ethDollarTotal}</li>
+                <li>Total spent on ADA: $ {props.adaDollarTotal}</li>
+                <li>Total spent on BSC: $ {props.bscDollarTotal}</li>
 
             </ul>
-            </Card>
     );
 
 

@@ -1,11 +1,12 @@
-.users {
+.tab {
   margin: 2rem auto;
   width: 90%;
+  
 }
 
 .users ul {
   list-style: none;
-  padding: 1rem;
+  padding: 0 .5rem 1rem .5rem;
 }
 
 .users li {
