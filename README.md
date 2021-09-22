@@ -20,13 +20,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
@@ -94,9 +87,7 @@ Here's a blank template to get started:
 
 ### Built With
 
-* []()
-* []()
-* []()
+* [ReactJS](https://reactjs.org/)
 
 
 
@@ -105,12 +96,12 @@ Here's a blank template to get started:
 
 To get a local copy up and running follow these simple steps.
 
-### Prerequisites
+<!-- ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
-  npm install npm@latest -g
+  npm install npm@latest -g -->
   ```
 
 ### Installation
@@ -126,19 +117,19 @@ This is an example of how to list things you need to use the software and how to
 
 
 
-<!-- USAGE EXAMPLES -->
+<!-- USAGE EXAMPLES
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 
 
-<!-- ROADMAP -->
+<!-- ROADMAP
 ## Roadmap
 
-See the [open issues](https://github.com/trevtanner/c-trak/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/trevtanner/c-trak/issues) for a list of proposed features (and known issues). -->
 
 
 
@@ -165,18 +156,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@@trevtanner](https://twitter.com/@trevtanner) - trevor.tanner.developer@gmail.com
+Your Name - [@trevtanner](https://twitter.com/@trevtanner) - trevor.tanner.developer@gmail.com
 
 Project Link: [https://github.com/trevtanner/c-trak](https://github.com/trevtanner/c-trak)
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
+<!-- ACKNOWLEDGEMENTS
 ## Acknowledgements
 
 * []()
 * []()
-* []()
+* []() -->
 
 
 
