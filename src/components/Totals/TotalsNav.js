@@ -37,6 +37,18 @@ const TotalsNav = (props) => {
              />
           </section>
         </Tab>
+        <Tab eventKey="perCoin" title="Price Per Coin">
+        <section className={classes.users}>
+          <DollarTotals
+            transactions={props.transactionsList}
+            dollarTotal={props.dollarTotal}
+            btcDollarTotal={props.btcDollarTotal}
+            ethDollarTotal={props.ethDollarTotal}
+            adaDollarTotal={props.adaDollarTotal}
+            bscDollarTotal={props.bscDollarTotal}
+             />
+          </section>
+        </Tab>
         <Tab eventKey="current" title="Current Value" disabled>
         </Tab>
       </Tabs>

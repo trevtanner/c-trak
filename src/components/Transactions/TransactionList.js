@@ -8,8 +8,11 @@ import classes from './TransactionList.module.css'
 const TransactionList = (props) => {
   const [transactionDisplay, setTransactionDisplay] = useState()
 
+  
+
   return (
     <Card className={classes.users}>
+      <h1>Transactions</h1>
     <ul>
       {props.transactions.map((item) => (
         <Transaction

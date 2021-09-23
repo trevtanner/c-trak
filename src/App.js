@@ -21,6 +21,11 @@ const App = () => {
   const [adaDollarTotal, setAdaDollarTotal] = useState(0)
   const [bscDollarTotal, setBscDollarTotal] = useState(0)
 
+  const [btcPPC, setBtcPPC] = useState(0)
+  const [ethPPC, setEthPPC] = useState(0)
+  const [adaPPC, setAdaPPC] = useState(0)
+  const [bscPPC, setBscPPC] = useState(0)
+
 
   const addUserHandler = (transaction) => {
     setTransactionsList((prevTransactionsList) => {
@@ -30,9 +35,12 @@ const App = () => {
     const addToTotal = () => {
       setDollarTotal(prevState => parseFloat(prevState) + parseFloat(transaction.value));
 
+      let newTrans = parseInt(transaction.value) * parseInt(transaction.amount)
+
       if (transaction.coin === "BTC") {
         setBtcTotal(prevState => parseFloat(prevState) + parseFloat(transaction.amount));
         setBtcDollarTotal(prevState => parseFloat(prevState) + parseFloat(transaction.value));
+        setBtcPPC(prevState => (parseFloat(prevState)*parseInt(btcTotal)+parseInt(newTrans)))
       }
       if (transaction.coin === "ETH") {
         setEthTotal(prevState => parseFloat(prevState) + parseFloat(transaction.amount));
