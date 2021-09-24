@@ -15,10 +15,22 @@ const AddTransaction = (props) => {
 
   const addUserHandler = (event) => {
     event.preventDefault();
-    if (enteredAmount.trim().length === 0 || enteredValue.trim().length === 0) {
+    if (enteredAmount.trim().length === 0) {
       setError({
-        title: "Invalid input",
-        message: "Please enter a valid amount and value (non-empty values).",
+        title: "Invalid Amount",
+        message: "Please enter a valid amount (non-empty values).",
+      });
+      return;
+    } if (enteredValue.trim().length === 0) {
+      setError({
+        title: "Invalid Value",
+        message: "Please enter a valid value (non-empty values).",
+      });
+      return;
+    } if (enteredDate.trim().length === 0) {
+      setError({
+        title: "Invalid Date",
+        message: "Please enter a valid date.",
       });
       return;
     }

@@ -7,8 +7,12 @@ import DollarTotals from "./DollarTotals";
 import classes from "./TotalsNav.module.css";
 
 const TotalsNav = (props) => {
+
+  const hasTransactions = props.transactions.length > 0
+
   return (
-      <Card>
+    <Card>
+    { hasTransactions && 
       <Tabs
         defaultActiveKey="coin"
         id="totals"
@@ -52,6 +56,7 @@ const TotalsNav = (props) => {
         <Tab eventKey="current" title="Current Value" disabled>
         </Tab>
       </Tabs>
+}
       </Card>
   );
 };

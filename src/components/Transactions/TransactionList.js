@@ -8,12 +8,16 @@ import classes from './TransactionList.module.css'
 const TransactionList = (props) => {
   const [transactionDisplay, setTransactionDisplay] = useState()
 
+  const hasTransactions = props.transactions.length > 0
+
   
 
   return (
     <Card className={classes.users}>
+      { hasTransactions &&
+      <section>
       <h1>Transactions</h1>
-    <ul>
+     <ul>
       {props.transactions.map((item) => (
         <Transaction
           key={item.id}
@@ -24,6 +28,8 @@ const TransactionList = (props) => {
         />
       ))}
     </ul>
+    </section>
+}
   </Card>
   )
 }

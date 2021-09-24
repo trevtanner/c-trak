@@ -63,7 +63,10 @@ const App = () => {
 
   return (
     <Fragment>
+      <section id='heading'>
       <Heading />
+      </section>
+      <section className='body'>
       <AddTransaction onSaveTransactionData={addUserHandler} />
       <TotalsNav
         transactions={transactionsList}
@@ -79,7 +82,10 @@ const App = () => {
 
          />
       <TransactionList transactions={transactionsList} />
+      </section>
+      <section className='footer'>
       <Footer />
+      </section>
     </Fragment>
   );
 };
