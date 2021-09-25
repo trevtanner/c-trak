@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <section className={classes.footer}>
-      <footer className="page-footer font-small pt-4">
+      <footer className="page-footer font-small">
         <div className="container-fluid text-center">
           <div className="row">
             <div>
@@ -26,6 +26,7 @@ const Footer = () => {
                 </a>
               </p>
               <p>&copy; {currentYear} TT Web Development and Design </p>
+              <p><a href="#">Privacy Policy</a></p>
             </div>
           </div>
         </div>

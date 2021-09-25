@@ -1,21 +1,26 @@
-const Transaction = (props) => {
-    let date = props.date
-    let options = { timeZone: 'UTC', timeZoneName: 'short'};
-    
-    const time = date.toLocaleString('en-US', options);
-  
+import FadeIn from "react-fade-in";
+import TransactionItem from "./TransactionItem";
 
+const Transaction = (props) => {
+  
      return (
-            <li key={props.id}>
-              <b>Amount:</b> {props.amount} {props.coin} 
-              <br />
-              <b>Cost in dollar at time of purchase:</b> ${props.value}
-              <br />
-              <b>Purchase Date:</b> {time}
-            </li>
-          )
-        
+       <FadeIn>
+              <ul>
+       {props.transactions.map((transaction) => (
+          <TransactionItem
+          key={transaction.id}
+          coin={transaction.coin}
+          amount={transaction.amount}
+          value={transaction.value}
+          date={transaction.date}
+          />
+          ))
         }
+        </ul>
+        </FadeIn>
+
+       )
+      }
  
 
  export default Transaction;

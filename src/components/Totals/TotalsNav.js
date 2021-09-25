@@ -41,7 +41,7 @@ const TotalsNav = (props) => {
              />
           </section>
         </Tab>
-        <Tab eventKey="perCoin" title="Price Per Coin">
+        <Tab eventKey="perCoin" title="Price Per Coin" disabled>
         <section className={classes.users}>
           <DollarTotals
             transactions={props.transactionsList}

@@ -1,8 +1,9 @@
 import React, { Fragment, useState } from "react";
+import FadeIn from 'react-fade-in';
 
 import AddTransaction from "./components/Transactions/AddTransaction";
 import TransactionList from "./components/Transactions/TransactionList";
-import Heading from "./components/UI/Heading";
+import Heading from "./components/UI/Layout/Heading";
 import Footer from "./components/UI/Layout/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -67,7 +68,11 @@ const App = () => {
       <Heading />
       </section>
       <section className='body'>
+    <FadeIn>
       <AddTransaction onSaveTransactionData={addUserHandler} />
+    </FadeIn>
+    <FadeIn
+    delay='75ms'>
       <TotalsNav
         transactions={transactionsList}
         btcTotal={btcTotal}
@@ -81,8 +86,12 @@ const App = () => {
         bscDollarTotal={bscDollarTotal}
 
          />
+         </FadeIn>
+         <FadeIn
+         delay='100ms'>
       <TransactionList transactions={transactionsList} />
-      </section>
+    </FadeIn>
+    </section>
       <section className='footer'>
       <Footer />
       </section>
@@ -93,5 +102,4 @@ const App = () => {
 export default App;
 
 //find way to move some logic out of App component
-//hide totals and transactions until 1 has been entered
 //add loading / fade in and out to components

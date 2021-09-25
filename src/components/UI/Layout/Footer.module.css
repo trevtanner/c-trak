@@ -2,6 +2,8 @@
     background: #2b5363;
     color: #fbb48c;
     width: 100%;
+    padding: .5em auto;
+    margin: auto;
 }
 
 .footer a {
@@ -10,4 +12,8 @@
 
 .footer a:hover {
     color: black;
+}
+
+.footer p {
+    margin: .5em;
 }
