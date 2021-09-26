@@ -1,19 +1,21 @@
 .footer {
-    background: #2b5363;
-    color: #fbb48c;
+    background: #1b2a41;
+    color: #eafdf8;
     width: 100%;
     padding: .5em auto;
     margin: auto;
 }
 
 .footer a {
-    color: #fbb48c;
+    color: #eafdf8;
 }
 
 .footer a:hover {
-    color: black;
+    color: #93032e;
 }
 
 .footer p {
     margin: .5em;
 }
+
+/* ["eafdf8","888098","1b2a41","93032e","0fa3b1"] */

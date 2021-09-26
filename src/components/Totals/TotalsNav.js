@@ -18,7 +18,7 @@ const TotalsNav = (props) => {
         id="totals"
         className={classes.tab}
       >
-        <Tab eventKey="coin" title="Coin Totals">
+        <Tab eventKey="coin" title="Coins">
         <section className={classes.users}>
           <CoinTotals
             transactions={props.transactionsList}
@@ -29,7 +29,7 @@ const TotalsNav = (props) => {
           />
            </section> 
         </Tab>
-        <Tab eventKey="dollar" title="Dollar Totals">
+        <Tab eventKey="dollar" title="Dollars">
         <section className={classes.users}>
           <DollarTotals
             transactions={props.transactionsList}

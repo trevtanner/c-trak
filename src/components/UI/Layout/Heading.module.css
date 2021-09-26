@@ -1,6 +1,15 @@
 .title {
     text-align: center;
-    background: #2b5363;
-    color: #fbb48c;
-    padding: .5em 0 1em;
+    background: #1b2a41;
+    padding: .25em;
 }
+
+.title h1 {
+    color: #eafdf8;
+}
+
+.title h1:hover {
+    color: #93032e;
+}
+
+/* ["eafdf8","888098","1b2a41","93032e","0fa3b1"] */

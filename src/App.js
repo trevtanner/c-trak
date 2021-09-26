@@ -28,6 +28,7 @@ const App = () => {
   const [bscPPC, setBscPPC] = useState(0)
 
 
+
   const addUserHandler = (transaction) => {
     setTransactionsList((prevTransactionsList) => {
       return [...prevTransactionsList, transaction];
@@ -68,11 +69,11 @@ const App = () => {
       <Heading />
       </section>
       <section className='body'>
-    <FadeIn>
+    <FadeIn delay='200'>
       <AddTransaction onSaveTransactionData={addUserHandler} />
     </FadeIn>
     <FadeIn
-    delay='75ms'>
+    delay='250'>
       <TotalsNav
         transactions={transactionsList}
         btcTotal={btcTotal}
@@ -88,7 +89,7 @@ const App = () => {
          />
          </FadeIn>
          <FadeIn
-         delay='100ms'>
+         delay='300'>
       <TransactionList transactions={transactionsList} />
     </FadeIn>
     </section>

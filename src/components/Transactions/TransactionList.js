@@ -6,7 +6,7 @@ import TransactionFilter from './TransactionFilter'
 import classes from './TransactionList.module.css'
 
 const TransactionList = (props) => {
-  const [filteredCoin, setFilteredCoin] = useState('BTC')
+  const [filteredCoin, setFilteredCoin] = useState('All')
 
   const hasTransactions = props.transactions.length > 0
 

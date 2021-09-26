@@ -18,13 +18,13 @@
 }
 
 .header {
-  background: #2b5363;
+  background: #1b2a41;
   padding: 1rem;
 }
 
 .header h2 {
   margin: 0;
-  color: white;
+  color: #93032e;
 }
 
 .content {
@@ -43,3 +43,5 @@
     width: 40rem;
   }
 }
+
+/* ["eafdf8","888098","1b2a41","93032e","0fa3b1"] */

@@ -1,16 +1,31 @@
-import React from 'react';
-import classes from './Heading.module.css'
-import Button from '../Button.js'
+import React from "react";
+import classes from "./Heading.module.css";
+import Button from "../Button.js";
+import { Container, Navbar } from "react-bootstrap";
+import FadeIn from 'react-fade-in';
 
 const Heading = (props) => {
-    return (
+  return (
     <header className={classes.title}>
-    <h1>C-Trak</h1>
-    <section className={classes.login}>
-    <Button>Login</Button>
-    </section>
+      <Navbar>
+        <Container>
+          <Navbar.Brand href="#home">
+          <FadeIn>
+          <h1>C-Trak</h1>
+          </FadeIn>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text>
+            <FadeIn>
+              <Button>Login</Button>
+              </FadeIn>
+            </Navbar.Text>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
-    )
+  );
 };
 
 export default Heading;

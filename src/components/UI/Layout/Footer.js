@@ -1,6 +1,7 @@
 import React from "react";
 import { FaTwitterSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import classes from "./Footer.module.css";
+import FadeIn from 'react-fade-in'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,6 +9,7 @@ const Footer = () => {
   return (
     <section className={classes.footer}>
       <footer className="page-footer font-small">
+      <FadeIn>
         <div className="container-fluid text-center">
           <div className="row">
             <div>
@@ -30,6 +32,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        </FadeIn>
       </footer>
     </section>
   );
