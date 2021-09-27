@@ -18,7 +18,7 @@ const Heading = (props) => {
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
             <FadeIn>
-              <Button>Login</Button>
+              {/* <Button>Login</Button> */}
               </FadeIn>
             </Navbar.Text>
           </Navbar.Collapse>

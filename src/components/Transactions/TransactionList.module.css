@@ -6,6 +6,8 @@
 .users ul {
   list-style: none;
   padding: .5rem;
+  width: 90%;
+  margin: auto;
 }
 
 .users li {
@@ -17,4 +19,5 @@
 .users h1 {
   text-align: center;
   color: #2b5363;
+  padding-top: .5em;
 }
