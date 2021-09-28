@@ -26,7 +26,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/trevtanner/c-trak">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="%PUBLIC_URL%/logocrop.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">c-Trak</h3>
