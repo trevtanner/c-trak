@@ -3,17 +3,18 @@ import classes from "./Heading.module.css";
 import Button from "../Button.js";
 import { Container, Navbar } from "react-bootstrap";
 import FadeIn from 'react-fade-in';
+import { Link } from "react-router-dom";
 
 const Heading = (props) => {
   return (
     <header className={classes.title}>
       <Navbar>
         <Container>
-          <Navbar.Brand href="#home">
           <FadeIn>
+          <Link to="/">
           <h1>C-Trak</h1>
+          </Link>
           </FadeIn>
-          </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>

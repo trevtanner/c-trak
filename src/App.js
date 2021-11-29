@@ -3,8 +3,6 @@ import FadeIn from 'react-fade-in';
 
 import AddTransaction from "./components/Transactions/AddTransaction";
 import TransactionList from "./components/Transactions/TransactionList";
-import Heading from "./components/UI/Layout/Heading";
-import Footer from "./components/UI/Layout/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import TotalsNav from "./components/Totals/TotalsNav";
@@ -65,9 +63,6 @@ const App = () => {
 
   return (
     <Fragment>
-      <section id='heading'>
-      <Heading />
-      </section>
       <section className='body'>
     <FadeIn delay='200'>
       <AddTransaction onSaveTransactionData={addUserHandler} />
@@ -93,9 +88,6 @@ const App = () => {
       <TransactionList transactions={transactionsList} />
     </FadeIn>
     </section>
-      <section className='footer'>
-      <Footer />
-      </section>
     </Fragment>
   );
 };

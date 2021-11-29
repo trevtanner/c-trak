@@ -6,6 +6,8 @@
 
 .title h1 {
     color: #eafdf8;
+    text-decoration-line: none;
+
 }
 
 .title h1:hover {
