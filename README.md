@@ -151,7 +151,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@trevtanner](https://twitter.com/@trevtanner) - trevor.tanner.developer@gmail.com
+[@trevtanner](https://twitter.com/@trevtanner) - trevor.tanner.developer@gmail.com
 
 Project Link: [https://github.com/trevtanner/c-trak](https://github.com/trevtanner/c-trak)
 
