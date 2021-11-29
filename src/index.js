@@ -9,23 +9,27 @@ import Heading from "./components/UI/Layout/Heading";
 import Footer from "./components/UI/Layout/Footer";
 import Prices from "./components/Prices/Prices"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Resources from "./components/Resources/Resources";
 
 ReactDOM.render(
-  <Fragment>
-    <BrowserRouter>
+  <BrowserRouter>
+  <body>
+    <div className="content">
     <section id="heading">
       <Heading />
     </section>
+    <section className="body">
     <Routes>
     <Route path='/' element={<App />} />
     <Route path='/prices' element={<Prices />} />
+    <Route path='/resources' element={<Resources />} />
     </Routes>
-
-   
+    </section>
+    </div>
     <section className="footer">
       <Footer />
     </section>
-    </BrowserRouter>
-  </Fragment>,
+  </body>
+    </BrowserRouter>,
   document.getElementById("root")
 );
