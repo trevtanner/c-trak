@@ -1,16 +1,27 @@
 .title {
     text-align: center;
-    background: #1b2a41;
-    padding: .25em;
+    background-color: #1b2a41;
 }
 
 .title h1 {
-    color: #eafdf8;
-    text-decoration-line: none;
+    color: black;
 
 }
 
 .title h1:hover {
+    color: #93032e;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
+    color: #eafdf8;
+}
+
+.link {
     color: #93032e;
 }
 

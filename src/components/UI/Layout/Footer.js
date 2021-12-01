@@ -28,7 +28,7 @@ const Footer = () => {
                 </a>
               </p>
               <p>&copy; {currentYear} TT Web Development and Design </p>
-              <p><a href="#">Privacy Policy</a></p>
+              <p><a href="/">Privacy Policy</a></p>
             </div>
           </div>
         </div>
