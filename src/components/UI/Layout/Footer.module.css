@@ -4,6 +4,7 @@
     width: 100%;
     padding: .5em auto;
     margin: auto;
+    flex-shrink: 0;
 }
 
 .footer a {
