@@ -39,7 +39,7 @@ const Heading = (props) => {
     <header className={classes.title}>
         <div class="ui inverted secondary pointing menu">
           <div className="header item">
-            <h1>C-Trak</h1>
+            <h1>{process.env.REACT_APP_TITLE}</h1>
           </div>
           <Link to="/" className="item">
             Tracker

@@ -1,35 +1,36 @@
-import { useState, useEffect } from "react";
-import { Alert, CircularProgress, Grid } from "@mui/material";
-import FadeIn from "react-fade-in";
-import { Container, Card } from "semantic-ui-react";
-import { computeHeadingLevel } from "@testing-library/react";
+import { useState, useEffect } from 'react'
+import { Alert, CircularProgress, Grid, Typography } from '@mui/material'
+import FadeIn from 'react-fade-in'
+import { Container, Card, Divider } from 'semantic-ui-react'
+import { computeHeadingLevel } from '@testing-library/react'
+import { isBigNumberish } from '@ethersproject/bignumber/lib/bignumber'
+
+const key = process.env.REACT_APP_NOMICS_API_KEY
 
 const Prices = () => {
-  const [error, setError] = useState(undefined);
-  const [loading, setLoading] = useState(true);
-  const [coins, setCoins] = useState([]);
-  const [coinId, setCoinId] = useState("");
+  const [error, setError] = useState(undefined)
+  const [loading, setLoading] = useState(true)
+  const [coins, setCoins] = useState([])
+  const [coinId, setCoinId] = useState('')
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://api.binance.com/api/v3/avgPrice'
-        );
-        const data = await response.json();
-        setCoins(data.results);
+          `https://api.nomics.com/v1/currencies/ticker?key=${key}&per-page=50&page=1`,
+        )
+        const data = await response.json()
+        setCoins(data)
       } catch (e) {
-        setError(e.message || "Something went wrong");
+        setError(e.message || 'Something went wrong')
       }
 
-      setLoading(false);
-    };
-    fetchData();
-    console.log(coins);
-  }, []);
-
+      setLoading(false)
+    }
+    fetchData()
+  }, [])
   if (error) {
-    return <Alert severity="error">{error}</Alert>;
+    return <Alert severity="error">{error}</Alert>
   }
 
   if (loading) {
@@ -37,133 +38,29 @@ const Prices = () => {
       <Grid container justify="center">
         <CircularProgress />
       </Grid>
-    );
+    )
   }
 
-  // const coinsList = coins.map((coin) => (
-  //   <Card>
-  //   <Card.Content>
-  //     <Card.Header>{coin.name}</Card.Header>
-  //     <Card.Meta>BTC</Card.Meta>
-  //     <Card.Description>$ Current Price</Card.Description>
-  //   </Card.Content>
-  // </Card>
-  // ))
+  const coinsList = coins.map((coin) => (
+    <Card>
+      <Card.Content>
+        <Card.Header>{coin.name}</Card.Header>
+        <Card.Meta>{coin.symbol}</Card.Meta>
+        <Card.Description>${Number(coin.price).toFixed(2)}</Card.Description>
+      </Card.Content>
+    </Card>
+  ))
 
   return (
     <Container className="pt-4 pb-4">
       <FadeIn>
-        <Card.Group itemsPerRow={2}>
-          <Card>
-            <Card.Content>
-              <Card.Header>Bitcoin</Card.Header>
-              <Card.Meta>BTC</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-
-          <Card>
-            <Card.Content>
-              <Card.Header>Ether</Card.Header>
-              <Card.Meta>ETH</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-
-          <Card>
-            <Card.Content>
-              <Card.Header>Cardano</Card.Header>
-              <Card.Meta>ADA</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-
-          <Card>
-            <Card.Content>
-              <Card.Header>Binance Smart Chain</Card.Header>
-              <Card.Meta>BSC</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-          <Card>
-            <Card.Content>
-              <Card.Header>Cardano</Card.Header>
-              <Card.Meta>ADA</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-
-          <Card>
-            <Card.Content>
-              <Card.Header>Binance Smart Chain</Card.Header>
-              <Card.Meta>BSC</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-          <Card>
-            <Card.Content>
-              <Card.Header>Cardano</Card.Header>
-              <Card.Meta>ADA</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-
-          <Card>
-            <Card.Content>
-              <Card.Header>Binance Smart Chain</Card.Header>
-              <Card.Meta>BSC</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-          <Card>
-            <Card.Content>
-              <Card.Header>Cardano</Card.Header>
-              <Card.Meta>ADA</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-
-          <Card>
-            <Card.Content>
-              <Card.Header>Binance Smart Chain</Card.Header>
-              <Card.Meta>BSC</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-          <Card>
-            <Card.Content>
-              <Card.Header>Cardano</Card.Header>
-              <Card.Meta>ADA</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-
-          <Card>
-            <Card.Content>
-              <Card.Header>Binance Smart Chain</Card.Header>
-              <Card.Meta>BSC</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-          <Card>
-            <Card.Content>
-              <Card.Header>Cardano</Card.Header>
-              <Card.Meta>ADA</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-
-          <Card>
-            <Card.Content>
-              <Card.Header>Binance Smart Chain</Card.Header>
-              <Card.Meta>BSC</Card.Meta>
-              <Card.Description>$ Current Price</Card.Description>
-            </Card.Content>
-          </Card>
-        </Card.Group>
+        <Card.Group itemsPerRow={2}>{coinsList}</Card.Group>
+        <Divider />
+        <Typography variant='body1' sx={{textAlign: 'center'}}>Data pulled using <a href='https://nomics.com/'>Nomics.com</a> API</Typography>
+        {/* https://nomics.com/ */}
       </FadeIn>
     </Container>
-  );
-};
+  )
+}
 
-export default Prices;
+export default Prices
