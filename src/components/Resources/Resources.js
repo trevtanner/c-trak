@@ -70,8 +70,6 @@ const Resources = () => {
     <Grid item xs={12} sm={4}>
       <Card
         sx={{
-          height: '175px',
-          maxWidth: '350px',
           margin: 'auto',
           textAlign: 'center',
         }}
@@ -109,10 +107,7 @@ const Resources = () => {
     <Grid item xs={12} sm={4}>
       <Card
         sx={{
-          maxWidth: '400px',
-          maxHeight: '300px',
-          margin: 'auto',
-          textAlign: 'center',
+
         }}
       >
         <CardContent
