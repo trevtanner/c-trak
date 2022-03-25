@@ -39,10 +39,10 @@ function Prices() {
   }, []);
 
   const coinsList = coins.map((coin) => (
-    <Grid item xs={6} sm={4} md={3} lg={2}>
-    <Card sx={{height: 'auto'}}>
-    <CardHeader
-    title={coin.name}
+    <Grid item xs={6} sm={4} md={3} lg={3}>
+    <Card elevation={6} sx={{}}>
+    <CardHeader 
+    subheader={coin.name}
     />
       <CardMedia
         component="img"
